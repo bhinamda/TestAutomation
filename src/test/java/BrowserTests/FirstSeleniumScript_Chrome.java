@@ -1,4 +1,4 @@
-package ChromeTests;
+package BrowserTests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
