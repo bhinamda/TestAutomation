@@ -1,5 +1,6 @@
 package BrowserTests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +12,8 @@ public class FirstSeleniumScript_Firefox {
     public static WebDriver driver;
     public void launchBrowser() throws InterruptedException
     {
-        System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"/src/test/resources/geckodriver.exe");
+        WebDriverManager.chromedriver().setup();
+     //   System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"/src/test/resources/geckodriver.exe");
         FirefoxOptions options=new FirefoxOptions();
         options.addArguments("--start-maximized");
       //  options.addArguments("-headless");
