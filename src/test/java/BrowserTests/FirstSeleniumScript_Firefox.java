@@ -12,7 +12,7 @@ public class FirstSeleniumScript_Firefox {
     public static WebDriver driver;
     public void launchBrowser() throws InterruptedException
     {
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
      //   System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"/src/test/resources/geckodriver.exe");
         FirefoxOptions options=new FirefoxOptions();
         options.addArguments("--start-maximized");
