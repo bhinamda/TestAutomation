@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import java.util.Arrays;
 
 public class FirstSeleniumScript_Chrome {
@@ -22,6 +21,7 @@ public class FirstSeleniumScript_Chrome {
         options.setExperimentalOption("excludeSwitches",Arrays.asList("enable-automation","disable-infobars"));
         driver=new ChromeDriver(options);
         System.out.println("Browser is launched");
+        driver.manage().deleteAllCookies();
         driver.get("https://www.saucedemo.com/");
         Thread.sleep(3000);
     }
@@ -44,7 +44,6 @@ public class FirstSeleniumScript_Chrome {
     }
 
     //Locating the elements
-
     public void checkFunctionalities() throws InterruptedException{
        String currentURL=driver.getCurrentUrl();
        System.out.println(currentURL);
@@ -68,7 +67,6 @@ public class FirstSeleniumScript_Chrome {
         driver.navigate().back();
     }
 
-
     public void logout() throws InterruptedException
     {
         WebElement logout=driver.findElement(By.xpath("//*[text()='Open Menu']"));
@@ -78,6 +76,7 @@ public class FirstSeleniumScript_Chrome {
         clickLogout.click();
         Thread.sleep(2000);
         System.out.println("logged out of Chrome");
+
     }
 
     public void closeBrowser()
@@ -87,7 +86,6 @@ public class FirstSeleniumScript_Chrome {
 
     public static void main(String a[]) throws InterruptedException
     {
-
     FirstSeleniumScript_Chrome f=new FirstSeleniumScript_Chrome();
     f.launchBrowser();
     f.login();
