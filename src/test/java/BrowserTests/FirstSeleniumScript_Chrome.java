@@ -107,7 +107,7 @@ public class FirstSeleniumScript_Chrome {
        radiobtn.click();
        System.out.println("Radio button is selected:"+radiobtn.isSelected()); //getting false for isSelected()
 */
-        public void checkBox () throws InterruptedException
+        public void checkBox (String hobby) throws InterruptedException
         {
             WebElement checkbox = driver.findElement(By.xpath("//input[@value='Dancing']"));
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true)", checkbox);
@@ -125,7 +125,7 @@ public class FirstSeleniumScript_Chrome {
                 System.out.println(hobbies);
 
                 //Select a particular checkbox from a list of checkboxes
-                if(hobbies.contains("Drawing"))
+                if(hobbies.contains("hobby"))
                 {
                     ele.click();
                     Thread.sleep(2000);
@@ -162,7 +162,7 @@ public class FirstSeleniumScript_Chrome {
             f.title();
             f.checkFunctionalities();
             f.radioButton();
-            f.checkBox();
+            f.checkBox("Sketching");
             f.logout();
             f.closeBrowser();
         }
