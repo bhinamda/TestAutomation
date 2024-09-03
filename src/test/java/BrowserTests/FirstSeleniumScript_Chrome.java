@@ -7,12 +7,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
 import java.util.Arrays;
 import java.util.List;
 
 public class FirstSeleniumScript_Chrome {
 
     public static WebDriver driver;
+
     public void launchBrowser() throws InterruptedException
     {
        WebDriverManager.chromedriver().setup();
@@ -75,12 +77,12 @@ public class FirstSeleniumScript_Chrome {
         driver.navigate().to("https://www.automationtestinginsider.com/2019/08/student-registration-form.html");
         System.out.println("User is navigated to automationTestingInsider form page");
         Thread.sleep(2000);
-        driver.navigate().refresh();
-        Thread.sleep(3000);
-        driver.navigate().back();
-        Thread.sleep(2000);
-        driver.navigate().forward();
-        Thread.sleep(3000);
+//        driver.navigate().refresh();
+//        Thread.sleep(3000);
+//        driver.navigate().back();
+//        Thread.sleep(2000);
+//        driver.navigate().forward();
+//        Thread.sleep(3000);
         WebElement radioButton = driver.findElement(By.xpath("//input[@value='Female']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true)", radioButton);
 
@@ -136,6 +138,94 @@ public class FirstSeleniumScript_Chrome {
        Thread.sleep(2000);
         }
 
+    public void Dropdowntest() throws InterruptedException {
+        WebElement bday = driver.findElement(By.id("Birthday_Day"));
+        WebElement bmonth = driver.findElement(By.id("Birthday_Month"));
+        WebElement byear = driver.findElement(By.id("Birthday_Year"));
+
+        Select selectday = new Select(bday);
+        Select selectmonth = new Select(bmonth);
+        Select selectyear = new Select(byear);
+
+        selectday.selectByIndex(22);
+        Thread.sleep(2000);
+        selectmonth.selectByValue("December");
+        selectmonth.selectByValue("January");
+        selectmonth.selectByValue("February");
+        Thread.sleep(2000);
+        selectyear.selectByVisibleText("1995");
+        Thread.sleep(2000);
+
+        //Get first selected item
+        WebElement firstvalue_month = selectmonth.getFirstSelectedOption();
+        System.out.println(firstvalue_month.getText());
+
+        //Get all options from the dropdown list
+
+        List<WebElement> allbirthdayoptions = selectday.getOptions();
+
+        for (int i = 1; i < allbirthdayoptions.size(); i++) {
+            WebElement all = allbirthdayoptions.get(i);
+            System.out.println(all.getAttribute("value"));
+            //OR use the below- Advanced for loop
+//                for(WebElement ele:allbirthdayoptions)
+//                {
+//                    System.out.println(ele.getText());
+//                }
+        }
+    }
+
+    public void multiselectDropdowntest() throws InterruptedException
+    {
+//            driver.navigate().to("https://demo.mobiscroll.com/jquery/select/multiple-select#");
+//            Thread.sleep(2000);
+//           WebElement multiselectDropdown=driver.findElement(By.id("multiple-select-input"));
+//        multiselectDropdown.click();
+//        Thread.sleep(4000);
+//           Select skills=new Select(multiselectDropdown);
+//           skills.selectByValue("css");
+//           Thread.sleep(2000);
+//           skills.selectByIndex(3);
+//           Thread.sleep(2000);
+//           skills.selectByVisibleText("html");
+//           Thread.sleep(2000);
+    }
+
+    public int factorial(int no)
+    {
+        int factorial=no;
+        int num=no;
+        for(int i=no;i>1;i--)
+        {
+            factorial=factorial*(no-1);
+            no=no-1;
+        }
+        System.out.println("factorial of " +num+ " is "+factorial);
+        return factorial;
+    }
+
+    public void bootstrapDropdowntest() throws InterruptedException
+    {
+        driver.navigate().to("https://www.automationtestinginsider.com/2019/12/bootstrap-dropdown-example_12.html");
+        Thread.sleep(2000);
+        WebElement bootstrap=driver.findElement(By.id("bootstrapmenu"));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true)",bootstrap);
+        bootstrap.click();
+        Thread.sleep(2000);
+
+        List <WebElement> options=driver.findElements(By.xpath("//ul[@class='dropdown-menu']//li/a"));
+        for(WebElement ele:options)
+        {
+            String value=ele.getText();
+            System.out.println(value);
+
+            if(value.contains("CONTACT US"))
+            {
+                ele.click();
+                break;
+            }
+        }
+    }
 
         public void logout () throws InterruptedException
         {
@@ -146,7 +236,6 @@ public class FirstSeleniumScript_Chrome {
             clickLogout.click();
             Thread.sleep(1000);
             System.out.println("logged out of Chrome");
-
         }
 
         public void closeBrowser ()
@@ -154,17 +243,22 @@ public class FirstSeleniumScript_Chrome {
             driver.quit();
         }
 
-        public static void main (String a[]) throws InterruptedException
+    public static void main (String a[]) throws InterruptedException
         {
             FirstSeleniumScript_Chrome f = new FirstSeleniumScript_Chrome();
             f.launchBrowser();
-            f.login();
-            f.title();
-            f.checkFunctionalities();
-            f.radioButton();
-            f.checkBox("Sketching");
-            f.logout();
-            f.closeBrowser();
+ //         f.login();
+ //         f.title();
+ //         f.checkFunctionalities();
+//          f.radioButton();
+ //         f.checkBox("Sketching");
+//          f.Dropdowntest();
+//          f.multiselectDropdowntest();
+//          f.logout();
+//          f.closeBrowser();
+ //         f.factorial(4);
+            f.bootstrapDropdowntest();
         }
 
     }
+
