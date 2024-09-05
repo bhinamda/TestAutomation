@@ -1,12 +1,12 @@
 package BrowserTests;
 
+import com.beust.ah.A;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import java.util.Arrays;
 import java.util.List;
@@ -104,11 +104,7 @@ public class FirstSeleniumScript_Chrome {
             }
         }
     }
-  /*   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-       WebElement radiobtn= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@for='gender-radio-2']")));
-       radiobtn.click();
-       System.out.println("Radio button is selected:"+radiobtn.isSelected()); //getting false for isSelected()
-*/
+
         public void checkBox (String hobby) throws InterruptedException
         {
             WebElement checkbox = driver.findElement(By.xpath("//input[@value='Dancing']"));
@@ -174,21 +170,21 @@ public class FirstSeleniumScript_Chrome {
 //                }
         }
     }
-
+// not a good site, ads
     public void multiselectDropdowntest() throws InterruptedException
     {
-//            driver.navigate().to("https://demo.mobiscroll.com/jquery/select/multiple-select#");
-//            Thread.sleep(2000);
-//           WebElement multiselectDropdown=driver.findElement(By.id("multiple-select-input"));
-//        multiselectDropdown.click();
-//        Thread.sleep(4000);
-//           Select skills=new Select(multiselectDropdown);
-//           skills.selectByValue("css");
-//           Thread.sleep(2000);
-//           skills.selectByIndex(3);
-//           Thread.sleep(2000);
-//           skills.selectByVisibleText("html");
-//           Thread.sleep(2000);
+            driver.navigate().to("https://demo.mobiscroll.com/jquery/select/multiple-select#");
+            Thread.sleep(2000);
+           WebElement multiselectDropdown=driver.findElement(By.id("multiple-select-input"));
+        multiselectDropdown.click();
+        Thread.sleep(4000);
+           Select skills=new Select(multiselectDropdown);
+           skills.selectByValue("css");
+           Thread.sleep(2000);
+           skills.selectByIndex(3);
+           Thread.sleep(2000);
+           skills.selectByVisibleText("html");
+           Thread.sleep(2000);
     }
 
     public int factorial(int no)
@@ -227,6 +223,41 @@ public class FirstSeleniumScript_Chrome {
         }
     }
 
+    public void Keyboardmousetest() throws InterruptedException
+    {
+        driver.navigate().to("https://www.google.com/");
+        Thread.sleep(2000);
+        WebElement googlesearch=driver.findElement(By.name("q"));
+        Actions a=new Actions(driver);
+
+        Action action= a.keyDown(googlesearch, Keys.SHIFT).sendKeys("selenium")
+                .keyUp(googlesearch,Keys.SHIFT)
+                        .keyDown(googlesearch,Keys.CONTROL).sendKeys("a")
+                        .keyUp(googlesearch,Keys.CONTROL)
+                        .keyDown(googlesearch,Keys.CONTROL).sendKeys("x")
+                        .keyUp(googlesearch,Keys.CONTROL)
+                        .keyDown(googlesearch,Keys.CONTROL).sendKeys("v")
+                        .keyUp(googlesearch,Keys.CONTROL)
+                .build();
+
+        action.perform();
+        System.out.println("Keyboard action performed");
+
+                Thread.sleep(2000);
+    }
+
+    //double click and right click-- getting ads in between so not working
+    public void doubleClickTest() throws InterruptedException
+    {
+        driver.navigate().to("https://www.automationtestinginsider.com/2019/08/textarea-textarea-element-defines-multi.html");
+        Thread.sleep(2000);
+        WebElement dblclick=driver.findElement(By.id("doubleClickBtn"));
+      ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView[true]",dblclick);
+        Actions a =new Actions(driver);
+        a.doubleClick(dblclick).perform();
+        Thread.sleep(2000);
+    }
+
         public void logout () throws InterruptedException
         {
             WebElement logout = driver.findElement(By.xpath("//*[text()='Open Menu']"));
@@ -257,7 +288,9 @@ public class FirstSeleniumScript_Chrome {
 //          f.logout();
 //          f.closeBrowser();
  //         f.factorial(4);
-            f.bootstrapDropdowntest();
+  //        f.bootstrapDropdowntest();
+  //        f.Keyboardmousetest();
+            f.doubleClickTest();
         }
 
     }
