@@ -2,6 +2,7 @@ package BrowserTests;
 
 import com.beust.ah.A;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.bouncycastle.asn1.esf.SPuri;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -22,11 +23,15 @@ public class FirstSeleniumScript_Chrome {
         ChromeOptions options=new ChromeOptions();
         options.addArguments("--start-maximized");
         options.addArguments("--incognito");
+       // options.addArguments("--headless");
         options.setExperimentalOption("excludeSwitches",Arrays.asList("enable-automation","disable-infobars"));
+        //options.add_argument("--disable-extensions");
+        options.addArguments("--disable-popup-blocking");
+        options.addArguments("--block-new-web-contents");
         driver=new ChromeDriver(options);
        System.out.println("Browser is launched");
         driver.manage().deleteAllCookies();
-        driver.get("https://www.saucedemo.com/");
+      //  driver.get("https://www.saucedemo.com/");
        Thread.sleep(3000);
     }
 
@@ -170,7 +175,7 @@ public class FirstSeleniumScript_Chrome {
 //                }
         }
     }
-// not a good site, ads
+// //not running because of ads, code is correct
     public void multiselectDropdowntest() throws InterruptedException
     {
             driver.navigate().to("https://demo.mobiscroll.com/jquery/select/multiple-select#");
@@ -246,7 +251,7 @@ public class FirstSeleniumScript_Chrome {
                 Thread.sleep(2000);
     }
 
-    //double click and right click-- getting ads in between so not working
+    ////not running because of ads, code is correct
     public void doubleClickTest() throws InterruptedException
     {
         driver.navigate().to("https://www.automationtestinginsider.com/2019/08/textarea-textarea-element-defines-multi.html");
@@ -265,6 +270,31 @@ public class FirstSeleniumScript_Chrome {
 
     }
 
+    //not running because of ads, code is correct
+    public void dragAndDropDemo() throws InterruptedException {
+
+        driver.navigate().to("https://demoqa.com/droppable");
+        Thread.sleep(2000);
+
+        WebElement From=driver.findElement(By.id("draggable"));
+        WebElement To=driver.findElement(By.id("droppable"));
+//        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView[true]",From);
+//        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView[true]",To);
+        Actions a=new Actions(driver);
+       // a.dragAndDrop(From,To).perform();
+      //  a.dragAndDropBy(From,150,150).perform();
+        a.clickAndHold(From).moveToElement(To).release().build().perform();
+        Thread.sleep(2000);
+        System.out.println("Method ran successfully ");
+WebElement droppedmsg=driver.findElement(By.xpath("//div/p[text()='Dropped!']"));
+if(droppedmsg.isDisplayed())
+{
+    System.out.println("Success:"+droppedmsg.getText());
+}
+else {
+    System.out.println("failed");
+}
+    }
         public void logout () throws InterruptedException
         {
             WebElement logout = driver.findElement(By.xpath("//*[text()='Open Menu']"));
@@ -285,19 +315,20 @@ public class FirstSeleniumScript_Chrome {
         {
             FirstSeleniumScript_Chrome f = new FirstSeleniumScript_Chrome();
             f.launchBrowser();
- //         f.login();
- //         f.title();
- //         f.checkFunctionalities();
-//          f.radioButton();
- //         f.checkBox("Sketching");
-//          f.Dropdowntest();
-//          f.multiselectDropdowntest();
-//          f.logout();
-//          f.closeBrowser();
- //         f.factorial(4);
-  //        f.bootstrapDropdowntest();
-  //        f.Keyboardmousetest();
+          f.login();
+          f.title();
+          f.checkFunctionalities();
+          f.radioButton();
+          f.checkBox("Sketching");
+          f.Dropdowntest();
+          f.multiselectDropdowntest();
+          f.logout();
+          f.closeBrowser();
+          f.factorial(4);
+          f.bootstrapDropdowntest();
+          f.Keyboardmousetest();
             f.doubleClickTest();
+            f.dragAndDropDemo();
         }
 
     }
