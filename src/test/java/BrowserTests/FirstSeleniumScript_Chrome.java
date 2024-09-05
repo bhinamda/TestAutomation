@@ -256,6 +256,13 @@ public class FirstSeleniumScript_Chrome {
         Actions a =new Actions(driver);
         a.doubleClick(dblclick).perform();
         Thread.sleep(2000);
+        //we are going back for the next operations because element is getting overriden by the ads
+        driver.navigate().back();
+        Thread.sleep(2000);
+        WebElement rightclick=driver.findElement(By.id("rightClickBtn"));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView[true]",rightclick);
+        a.contextClick(rightclick).perform();
+
     }
 
         public void logout () throws InterruptedException
