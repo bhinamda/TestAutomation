@@ -3,6 +3,7 @@ package BrowserTests;
 import com.beust.ah.A;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.bouncycastle.asn1.esf.SPuri;
+import org.checkerframework.checker.units.qual.K;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -314,6 +315,22 @@ else {
         System.out.println(tooltiptext.getText());
         Thread.sleep(2000);
     }
+//correct code but elt is not getting clicking due to overlapping of ads on that element
+    public void multiselect() throws InterruptedException
+    {
+        driver.navigate().to("https://www.automationtestinginsider.com/2019/08/textarea-textarea-element-defines-multi.html");
+        Thread.sleep(2000);
+        List <WebElement>l=driver.findElements(By.xpath("//select[@name='list_box_name[]']/option"));
+            Actions a=new Actions(driver);
+            Action act=a.keyDown(Keys.CONTROL).click(l.get(0))
+                    .keyDown(Keys.CONTROL).click(l.get(1))
+                    .keyDown(Keys.CONTROL).click(l.get(2))
+                    .keyUp(Keys.CONTROL).build();
+            act.perform();
+            Thread.sleep(2000);
+
+    }
+
         public void logout () throws InterruptedException
         {
             WebElement logout = driver.findElement(By.xpath("//*[text()='Open Menu']"));
@@ -334,21 +351,22 @@ else {
         {
             FirstSeleniumScript_Chrome f = new FirstSeleniumScript_Chrome();
             f.launchBrowser();
-          f.login();
-          f.title();
-          f.checkFunctionalities();
-          f.radioButton();
-          f.checkBox("Sketching");
-          f.Dropdowntest();
-          f.multiselectDropdowntest();
-          f.logout();
-          f.closeBrowser();
-          f.factorial(4);
-          f.bootstrapDropdowntest();
-          f.Keyboardmousetest();
-            f.doubleClickTest();
-            f.dragAndDropDemo();
-            f.tooltipdemo();
+//          f.login();
+//          f.title();
+//          f.checkFunctionalities();
+//          f.radioButton();
+//          f.checkBox("Sketching");
+//          f.Dropdowntest();
+//          f.multiselectDropdowntest();
+//          f.logout();
+//          f.closeBrowser();
+//          f.factorial(4);
+//          f.bootstrapDropdowntest();
+//          f.Keyboardmousetest();
+//          f.doubleClickTest();
+//          f.dragAndDropDemo();
+//          f.tooltipdemo();
+            f.multiselect();
         }
 
     }
