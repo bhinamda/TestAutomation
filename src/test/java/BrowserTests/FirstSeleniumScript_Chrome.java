@@ -295,6 +295,25 @@ else {
     System.out.println("failed");
 }
     }
+
+    public void tooltipdemo() throws InterruptedException
+    {
+        //with title attribute
+        driver.navigate().to("https://www.automationtestinginsider.com/p/blog-page.html");
+        WebElement tooltip=driver.findElement(By.xpath("//input[@class='gsc-input']"));
+       String tooltipText=tooltip.getAttribute("Title");
+        System.out.println(tooltipText);
+        //without using title attribute
+        driver.navigate().to("https://www.w3schools.com/css/css_tooltip.asp");
+        Thread.sleep(2000);
+        WebElement elt=driver.findElement(By.xpath("//div[@class='w3-quarter'][3]//div[@class='tooltip']"));
+        Actions a=new Actions(driver);
+        a.moveToElement(elt).perform();
+        Thread.sleep(2000);
+        WebElement tooltiptext=driver.findElement(By.xpath("//span[contains(@class,'tooltip-bottom')]"));
+        System.out.println(tooltiptext.getText());
+        Thread.sleep(2000);
+    }
         public void logout () throws InterruptedException
         {
             WebElement logout = driver.findElement(By.xpath("//*[text()='Open Menu']"));
@@ -329,6 +348,7 @@ else {
           f.Keyboardmousetest();
             f.doubleClickTest();
             f.dragAndDropDemo();
+            f.tooltipdemo();
         }
 
     }
