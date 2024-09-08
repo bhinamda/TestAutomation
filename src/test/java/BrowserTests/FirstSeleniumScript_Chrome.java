@@ -331,6 +331,19 @@ else {
 
     }
 
+    public void mouseHover() throws InterruptedException
+    {
+        driver.navigate().to("https://demoqa.com/menu");
+        Thread.sleep(2000);
+        WebElement elt = driver.findElement(By.xpath("//a[text()='Main Item 2']"));
+        Actions a=new Actions(driver);
+        a.moveToElement(elt).perform();
+        Thread.sleep(2000);
+        WebElement subitem=driver.findElement(By.xpath("(//li/a[contains(text(),'Sub Item')])[2]"));
+        subitem.click();
+        Thread.sleep(2000);
+    }
+
         public void logout () throws InterruptedException
         {
             WebElement logout = driver.findElement(By.xpath("//*[text()='Open Menu']"));
@@ -366,7 +379,8 @@ else {
 //          f.doubleClickTest();
 //          f.dragAndDropDemo();
 //          f.tooltipdemo();
-            f.multiselect();
+//            f.multiselect();
+            f.mouseHover();
         }
 
     }
