@@ -344,6 +344,24 @@ else {
         Thread.sleep(2000);
     }
 
+    public void autoSuggestions() throws InterruptedException {
+    driver.navigate().to("https://www.google.com/");
+    Thread.sleep(2000);
+    WebElement searchbox=driver.findElement(By.id("APjFqb"));
+    searchbox.sendKeys("Selenium");
+    Thread.sleep(2000);
+    List<WebElement> autos=driver.findElements(By.id("Alh6id"));
+    for(WebElement e:autos)
+    {
+        String text=e.getText();
+        if(text.contains(" selenium webdriver"))
+        {
+            e.click();
+            break;
+        }
+    }
+    }
+
         public void logout () throws InterruptedException
         {
             WebElement logout = driver.findElement(By.xpath("//*[text()='Open Menu']"));
@@ -364,23 +382,24 @@ else {
         {
             FirstSeleniumScript_Chrome f = new FirstSeleniumScript_Chrome();
             f.launchBrowser();
-//          f.login();
-//          f.title();
-//          f.checkFunctionalities();
-//          f.radioButton();
-//          f.checkBox("Sketching");
-//          f.Dropdowntest();
-//          f.multiselectDropdowntest();
-//          f.logout();
-//          f.closeBrowser();
-//          f.factorial(4);
-//          f.bootstrapDropdowntest();
-//          f.Keyboardmousetest();
-//          f.doubleClickTest();
-//          f.dragAndDropDemo();
-//          f.tooltipdemo();
-//            f.multiselect();
-            f.mouseHover();
+          f.login();
+          f.title();
+          f.checkFunctionalities();
+          f.radioButton();
+          f.checkBox("Sketching");
+          f.Dropdowntest();
+          f.multiselectDropdowntest();
+          f.logout();
+          f.closeBrowser();
+          f.factorial(4);
+          f.bootstrapDropdowntest();
+          f.Keyboardmousetest();
+          f.doubleClickTest();
+          f.dragAndDropDemo();
+          f.tooltipdemo();
+          f.multiselect();
+          f.mouseHover();
+            f.autoSuggestions();
         }
 
     }
