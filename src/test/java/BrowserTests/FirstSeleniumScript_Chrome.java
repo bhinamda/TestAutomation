@@ -1,9 +1,6 @@
 package BrowserTests;
 
-import com.beust.ah.A;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.bouncycastle.asn1.esf.SPuri;
-import org.checkerframework.checker.units.qual.K;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
