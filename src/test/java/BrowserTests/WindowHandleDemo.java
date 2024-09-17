@@ -1,6 +1,7 @@
 package BrowserTests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.checkerframework.checker.units.qual.A;
 import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -8,9 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
-import java.awt.*;
-import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Set;
@@ -31,15 +30,19 @@ public class WindowHandleDemo {
     }
 
     public void windowHandle() throws InterruptedException {
+
         //get total windows and print them
+
         String parentWindowHandle=driver.getWindowHandle();
         System.out.println("Parent window handle is:"+parentWindowHandle);
         Thread.sleep(2000);
 
 
-        WebElement  childWindow=driver.findElement(By.id("windowhandling1"));
+        WebElement childWindow=driver.findElement(By.id("windowhandling1"));
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true)",childWindow);
-
+        //Opening multiple windows for multiple window handling
+        childWindow.click();
+        childWindow.click();
         childWindow.click();
         Thread.sleep(2000);
 
@@ -50,6 +53,7 @@ public class WindowHandleDemo {
         {
             System.out.println(ele);
         }
+
         //To switch to child window and perform actions
 
         Iterator<String> itr=allWindowHandles.iterator();
@@ -67,15 +71,50 @@ public class WindowHandleDemo {
             }
         }
 driver.switchTo().window(parentWindowHandle);
-        driver.quit();
     }
 
+    //Program (Library) to handle multiple tabs
+    //handling windows and tabs is the same. In case of windows, you have to open multiple windows and in case of tabs, you have to open multiple tabs before getting allWindowHandles
+    public void multiple_tabsHandle() throws InterruptedException
+    {
+        driver.navigate().to("https://www.automationtestinginsider.com/p/java-qa.html");
+        Thread.sleep(2000);
+        WebElement ele=driver.findElement(By.linkText("Java Questions Part1 - Basic Questions"));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true)",ele);
+        String parentWindowHandle=driver.getWindowHandle();
+        System.out.println("Parent window handle is:"+parentWindowHandle);
+        Thread.sleep(2000);
+//opening multiple tabs, same is for windows open multiple windows
+        driver.findElement(By.linkText("Java Questions Part1 - Basic Questions")).click();
+        driver.findElement(By.linkText("Java Questions Part2 - OOPS Concept, Constructors, Static keyword")).click();
+        driver.findElement(By.linkText("Java Questions Part4 - Number Program")).click();
 
-
+        Set<String> allWindowHandles =driver.getWindowHandles();
+        Iterator<String> allWindows=allWindowHandles.iterator();
+        while(allWindows.hasNext())
+         {
+         String child=allWindows.next();
+         if(!parentWindowHandle.equals(child)){
+             driver.switchTo().window(child);
+             System.out.println("child url is:"+driver.getCurrentUrl());
+             Thread.sleep(2000);
+             driver.close();
+         }
+         driver.switchTo().window(parentWindowHandle);
+         }
+        driver.quit();
+}
+/*
+//      To switch windows/tabs using indexes
+        Set<String> allWindowHandles =driver.getWindowHandles();
+        ArrayList<String> al=new ArrayList<>(allWindowHandles);
+        driver.switchTo().window(al.get(0));
+*/
 
     public static void main(String[] args) throws InterruptedException{
         WindowHandleDemo w=new WindowHandleDemo();
         w.launch();
         w.windowHandle();
+        w.multiple_tabsHandle();
     }
 }
