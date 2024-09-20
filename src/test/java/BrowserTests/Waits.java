@@ -34,7 +34,7 @@ public class Waits {
 
     void ImplicitWaitTest() throws InterruptedException
     {
-
+        driver.manage().timeouts().pageLoadTimeout(5,TimeUnit.SECONDS);
         driver.get("https://www.automationtestinginsider.com/2019/08/textarea-textarea-element-defines-multi.html");
         WebElement clickbutton=driver.findElement(By.id("testWait123"));
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true)",clickbutton);
@@ -56,7 +56,6 @@ public class Waits {
 
     void FluentWaitTest() throws InterruptedException
     {
-
         FluentWait<WebDriver> fwait=new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofSeconds(2))
@@ -85,6 +84,7 @@ public void test() throws  InterruptedException
     driver.findElement(By.xpath("//*[text()='Next']")).click();
     Thread.sleep(2000);
 }
+
     public static void main(String a[]) throws InterruptedException {
         Waits w=new Waits();
         w.launchBrowser();
