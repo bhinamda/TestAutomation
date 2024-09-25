@@ -1,4 +1,5 @@
 package BrowserTests;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,6 +16,7 @@ public class DynamicWebtables {
 
      public void launch() throws InterruptedException
      {
+         WebDriverManager.chromedriver().setup();
          ChromeOptions options=new ChromeOptions();
          options.addArguments("--incognito");
          options.setExperimentalOption("excludeSwitches", Arrays.asList("enable-automation","disable-infobars"));
