@@ -1,11 +1,10 @@
 package BrowserTests;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -28,8 +27,7 @@ public class DynamicWebtables {
          Thread.sleep(2000);
      }
 
-     public void Webtables() throws InterruptedException
-     {
+     public void Webtables() throws InterruptedException, IOException {
 //table headings
         List <WebElement> table_headings=driver.findElements(By.xpath("//table[@id='customers']//tbody//th"));
          System.out.println("Table headings are as follows with no of headings as:"+table_headings.size());
@@ -95,8 +93,7 @@ public class DynamicWebtables {
 
          driver.quit();
      }
-    public static void main(String[] args) throws InterruptedException
-    {
+    public static void main(String[] args) throws InterruptedException, IOException {
         DynamicWebtables d=new DynamicWebtables();
         d.launch();
         d.Webtables();
