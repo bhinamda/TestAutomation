@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-26T15:18:18 GMT-04:00" name="Default Suite" finished-at="2024-09-26T15:18:24 GMT-04:00" duration-ms="5252">
+    <groups>
+    </groups>
+    <test started-at="2024-09-26T15:18:18 GMT-04:00" name="FirstSeleniumWebdriverScript" finished-at="2024-09-26T15:18:24 GMT-04:00" duration-ms="5252">
+      <class name="TestNG.sampleTestNG_class">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestNG.sampleTestNG_class@15b204a1]" started-at="2024-09-26T15:18:18 GMT-04:00" name="setup" finished-at="2024-09-26T15:18:24 GMT-04:00" duration-ms="5084" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="titleTest()[pri:0, instance:TestNG.sampleTestNG_class@15b204a1]" started-at="2024-09-26T15:18:24 GMT-04:00" name="titleTest" finished-at="2024-09-26T15:18:24 GMT-04:00" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestNG.sampleTestNG_class@15b204a1]" started-at="2024-09-26T15:18:24 GMT-04:00" name="closeBrowser" finished-at="2024-09-26T15:18:24 GMT-04:00" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- TestNG.sampleTestNG_class -->
+    </test> <!-- FirstSeleniumWebdriverScript -->
+  </suite> <!-- Default Suite -->
+</testng-results>
