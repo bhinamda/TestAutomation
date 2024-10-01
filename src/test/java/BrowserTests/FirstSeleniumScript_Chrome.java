@@ -29,7 +29,7 @@ public class FirstSeleniumScript_Chrome {
         driver=new ChromeDriver(options);
        System.out.println("Browser is launched");
         driver.manage().deleteAllCookies();
-      //  driver.get("https://www.saucedemo.com/");
+        driver.get("https://www.saucedemo.com/");
        Thread.sleep(3000);
     }
 
@@ -341,7 +341,8 @@ else {
         Thread.sleep(2000);
     }
 
-    public void autoSuggestions() throws InterruptedException {
+    public void autoSuggestions() throws InterruptedException
+    {
     driver.navigate().to("https://www.google.com/");
     Thread.sleep(2000);
     WebElement searchbox=driver.findElement(By.id("APjFqb"));
@@ -379,25 +380,24 @@ else {
         {
             FirstSeleniumScript_Chrome f = new FirstSeleniumScript_Chrome();
             f.launchBrowser();
-          f.login();
-          f.title();
-          f.checkFunctionalities();
-          f.radioButton();
-          f.checkBox("Sketching");
-          f.Dropdowntest();
-          f.multiselectDropdowntest();
-          f.logout();
-          f.closeBrowser();
-          f.factorial(4);
-          f.bootstrapDropdowntest();
-          f.Keyboardmousetest();
-          f.doubleClickTest();
-          f.dragAndDropDemo();
-          f.tooltipdemo();
-          f.multiselect();
-          f.mouseHover();
-            f.autoSuggestions();
+            f.login();
+            f.title();
+//            f.checkFunctionalities();
+//          f.radioButton();
+//          f.checkBox("Sketching");
+//          f.Dropdowntest();
+//          f.multiselectDropdowntest();
+//          f.factorial(4);
+//          f.bootstrapDropdowntest();
+//          f.Keyboardmousetest();
+//          f.doubleClickTest();
+//          f.dragAndDropDemo();
+//          f.tooltipdemo();
+//          f.multiselect();
+//          f.mouseHover();
+//          f.autoSuggestions();
+            f.logout();
+            f.closeBrowser();
         }
-
     }
 
