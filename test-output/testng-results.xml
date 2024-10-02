@@ -1,78 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="5" passed="3" failed="1" skipped="0">
+<testng-results ignored="1" total="8" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-01T22:41:30 GMT-04:00" name="All Test Suite" finished-at="2024-10-01T22:41:39 GMT-04:00" duration-ms="8380">
+  <suite started-at="2024-10-01T22:51:15 GMT-04:00" name="All Test Suite" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="11859">
     <groups>
     </groups>
-    <test started-at="2024-10-01T22:41:30 GMT-04:00" name="C:/Users/BHAKTI/Selenium Automation Projects/FirstSeleniumWebdriverScript" finished-at="2024-10-01T22:41:39 GMT-04:00" duration-ms="8380">
-      <class name="TestNG.SwagLabsTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestNG.SwagLabsTest@63a65a25]" started-at="2024-10-01T22:41:30 GMT-04:00" name="setup" finished-at="2024-10-01T22:41:32 GMT-04:00" duration-ms="1364" status="PASS">
+    <test started-at="2024-10-01T22:51:15 GMT-04:00" name="FirstSeleniumWebdriverScript" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="11859">
+      <class name="TestNG.sampleTestNG_class">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestNG.sampleTestNG_class@4e91d63f]" started-at="2024-10-01T22:51:15 GMT-04:00" name="setup" finished-at="2024-10-01T22:51:19 GMT-04:00" duration-ms="4061" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="launch()[pri:1, instance:TestNG.SwagLabsTest@63a65a25]" started-at="2024-10-01T22:41:32 GMT-04:00" name="launch" description="This will open the browser" finished-at="2024-10-01T22:41:34 GMT-04:00" duration-ms="2551" status="PASS">
+        <test-method signature="titleTest()[pri:0, instance:TestNG.sampleTestNG_class@4e91d63f]" started-at="2024-10-01T22:51:27 GMT-04:00" name="titleTest" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:TestNG.sampleTestNG_class@4e91d63f]" started-at="2024-10-01T22:51:27 GMT-04:00" name="closeBrowser" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- TestNG.sampleTestNG_class -->
+      <class name="TestNG.SwagLabsTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestNG.SwagLabsTest@56a6d5a6]" started-at="2024-10-01T22:51:19 GMT-04:00" name="setup" finished-at="2024-10-01T22:51:20 GMT-04:00" duration-ms="636" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="launch()[pri:1, instance:TestNG.SwagLabsTest@56a6d5a6]" started-at="2024-10-01T22:51:20 GMT-04:00" name="launch" description="This will open the browser" finished-at="2024-10-01T22:51:22 GMT-04:00" duration-ms="2570" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method signature="loginTest()[pri:2, instance:TestNG.SwagLabsTest@63a65a25]" started-at="2024-10-01T22:41:34 GMT-04:00" name="loginTest" finished-at="2024-10-01T22:41:36 GMT-04:00" duration-ms="2195" status="PASS">
+        <test-method signature="loginTest()[pri:2, instance:TestNG.SwagLabsTest@56a6d5a6]" started-at="2024-10-01T22:51:22 GMT-04:00" name="loginTest" finished-at="2024-10-01T22:51:25 GMT-04:00" duration-ms="2201" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method signature="currentUrlTest()[pri:3, instance:TestNG.SwagLabsTest@63a65a25]" started-at="2024-10-01T22:41:36 GMT-04:00" name="currentUrlTest" finished-at="2024-10-01T22:41:36 GMT-04:00" depends-on-methods="TestNG.SwagLabsTest.loginTest" duration-ms="0" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [https://www.saucedemo.com/inventory.htmll] but found [https://www.saucedemo.com/inventory.html]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [https://www.saucedemo.com/inventory.htmll] but found [https://www.saucedemo.com/inventory.html]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at TestNG.SwagLabsTest.currentUrlTest(SwagLabsTest.java:53)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="currentUrlTest()[pri:3, instance:TestNG.SwagLabsTest@56a6d5a6]" started-at="2024-10-01T22:51:25 GMT-04:00" name="currentUrlTest" finished-at="2024-10-01T22:51:25 GMT-04:00" depends-on-methods="TestNG.SwagLabsTest.loginTest" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- currentUrlTest -->
-        <test-method signature="LogoutTest()[pri:5, instance:TestNG.SwagLabsTest@63a65a25]" started-at="2024-10-01T22:41:36 GMT-04:00" name="LogoutTest" finished-at="2024-10-01T22:41:38 GMT-04:00" duration-ms="2105" status="PASS">
+        <test-method signature="LogoutTest()[pri:5, instance:TestNG.SwagLabsTest@56a6d5a6]" started-at="2024-10-01T22:51:25 GMT-04:00" name="LogoutTest" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="2123" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogoutTest -->
-        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:TestNG.SwagLabsTest@63a65a25]" started-at="2024-10-01T22:41:38 GMT-04:00" name="CloseBrowser" finished-at="2024-10-01T22:41:39 GMT-04:00" duration-ms="115" status="PASS">
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:TestNG.SwagLabsTest@56a6d5a6]" started-at="2024-10-01T22:51:27 GMT-04:00" name="CloseBrowser" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="96" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
       </class> <!-- TestNG.SwagLabsTest -->
-    </test> <!-- C:/Users/BHAKTI/Selenium Automation Projects/FirstSeleniumWebdriverScript -->
+      <class name="TestNG.TestAnnotations">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:TestNG.TestAnnotations@1a04f701]" started-at="2024-10-01T22:51:15 GMT-04:00" name="beforeSuite" finished-at="2024-10-01T22:51:15 GMT-04:00" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:TestNG.TestAnnotations@1a04f701]" started-at="2024-10-01T22:51:15 GMT-04:00" name="beforeTest" finished-at="2024-10-01T22:51:15 GMT-04:00" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:TestNG.TestAnnotations@1a04f701]" started-at="2024-10-01T22:51:27 GMT-04:00" name="beforeClass" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestNG.TestAnnotations@1a04f701]" started-at="2024-10-01T22:51:27 GMT-04:00" name="beforeMethod" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testmethod1()[pri:0, instance:TestNG.TestAnnotations@1a04f701]" started-at="2024-10-01T22:51:27 GMT-04:00" name="testmethod1" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testmethod1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNG.TestAnnotations@1a04f701]" started-at="2024-10-01T22:51:27 GMT-04:00" name="afterMethod" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:TestNG.TestAnnotations@1a04f701]" started-at="2024-10-01T22:51:27 GMT-04:00" name="beforeMethod" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testmethod2()[pri:0, instance:TestNG.TestAnnotations@1a04f701]" started-at="2024-10-01T22:51:27 GMT-04:00" name="testmethod2" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testmethod2 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:TestNG.TestAnnotations@1a04f701]" started-at="2024-10-01T22:51:27 GMT-04:00" name="afterClass" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:TestNG.TestAnnotations@1a04f701]" started-at="2024-10-01T22:51:27 GMT-04:00" name="afterMethod" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:TestNG.TestAnnotations@1a04f701]" started-at="2024-10-01T22:51:27 GMT-04:00" name="afterTest" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:TestNG.TestAnnotations@1a04f701]" started-at="2024-10-01T22:51:27 GMT-04:00" name="afterSuite" finished-at="2024-10-01T22:51:27 GMT-04:00" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- TestNG.TestAnnotations -->
+    </test> <!-- FirstSeleniumWebdriverScript -->
   </suite> <!-- All Test Suite -->
 </testng-results>

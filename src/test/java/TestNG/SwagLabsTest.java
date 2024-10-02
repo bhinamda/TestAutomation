@@ -11,7 +11,7 @@ import org.testng.annotations.*;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
-@Listeners(TestNG.TestNG_Listeners.Listener.class)
+//@Listeners(TestNG.TestNG_Listeners.Listener.class)
 public class SwagLabsTest {
     public static WebDriver driver;
 
@@ -49,7 +49,7 @@ public class SwagLabsTest {
         {
 
         String Actualurl = driver.getCurrentUrl();
-        Assert.assertEquals(Actualurl,"https://www.saucedemo.com/inventory.htmll");
+        Assert.assertEquals(Actualurl,"https://www.saucedemo.com/inventory.html");
     }
 
     @Test(priority=4,dependsOnMethods = {"loginTest"})

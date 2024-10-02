@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-All_Test_Suite" class="navigator-link">
-              <span class="suite-name border-failed">All Test Suite</span>
+              <span class="suite-name border-passed">All Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-All_Test_Suite" class="hide-methods failed suite-All_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-All_Test_Suite -->
-                      <a href="#" panel-name="suite-All_Test_Suite" class="show-methods failed suite-All_Test_Suite"> (show)</a> <!-- show-methods failed suite-All_Test_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-All_Test_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-All_Test_Suite" title="TestNG.SwagLabsTest" class="method navigator-link" hash-for-method="currentUrlTest">currentUrlTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-All_Test_Suite -->
+                    <span class="method-stats">7 methods,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -122,12 +108,32 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="TestNG.SwagLabsTest" class="method navigator-link" hash-for-method="currentUrlTest">currentUrlTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-All_Test_Suite" title="TestNG.SwagLabsTest" class="method navigator-link" hash-for-method="launch">launch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-All_Test_Suite" title="TestNG.SwagLabsTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="TestNG.TestAnnotations" class="method navigator-link" hash-for-method="testmethod1">testmethod1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="TestNG.TestAnnotations" class="method navigator-link" hash-for-method="testmethod2">testmethod2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="TestNG.sampleTestNG_class" class="method navigator-link" hash-for-method="titleTest">titleTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-All_Test_Suite -->
@@ -142,56 +148,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-All_Test_Suite" class="panel All_Test_Suite">
-          <div class="suite-All_Test_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">TestNG.SwagLabsTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="currentUrlTest">
-                  </a> <!-- currentUrlTest -->
-                  <span class="method-name">currentUrlTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [https://www.saucedemo.com/inventory.htmll] but found [https://www.saucedemo.com/inventory.html]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at TestNG.SwagLabsTest.currentUrlTest(SwagLabsTest.java:53)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-All_Test_Suite-class-failed -->
           <div class="suite-All_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -203,6 +159,13 @@
                   <a name="LogoutTest">
                   </a> <!-- LogoutTest -->
                   <span class="method-name">LogoutTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="currentUrlTest">
+                  </a> <!-- currentUrlTest -->
+                  <span class="method-name">currentUrlTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -223,6 +186,43 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-All_Test_Suite-class-passed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestNG.TestAnnotations</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testmethod1">
+                  </a> <!-- testmethod1 -->
+                  <span class="method-name">testmethod1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testmethod2">
+                  </a> <!-- testmethod2 -->
+                  <span class="method-name">testmethod2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
+          <div class="suite-All_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestNG.sampleTestNG_class</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="titleTest">
+                  </a> <!-- titleTest -->
+                  <span class="method-name">titleTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-All_Test_Suite-class-passed -->
         </div> <!-- panel All_Test_Suite -->
         <div panel-name="test-xml-All_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -233,7 +233,10 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;All Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;C:/Users/BHAKTI/Selenium Automation Projects/FirstSeleniumWebdriverScript&quot; verbose=&quot;2&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;TestNG.TestNG_Listeners.Listener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;FirstSeleniumWebdriverScript&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestNG.SwagLabsTest&quot;&gt;
         &lt;methods&gt;
@@ -243,8 +246,19 @@
           &lt;include name=&quot;LogoutTest&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- TestNG.SwagLabsTest --&gt;
+      &lt;class name=&quot;TestNG.TestAnnotations&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;testmethod1&quot;/&gt;
+          &lt;include name=&quot;testmethod2&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- TestNG.TestAnnotations --&gt;
+      &lt;class name=&quot;TestNG.sampleTestNG_class&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;titleTest&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- TestNG.sampleTestNG_class --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- C:/Users/BHAKTI/Selenium Automation Projects/FirstSeleniumWebdriverScript --&gt;
+  &lt;/test&gt; &lt;!-- FirstSeleniumWebdriverScript --&gt;
 &lt;/suite&gt; &lt;!-- All Test Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -256,7 +270,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">C:/Users/BHAKTI/Selenium Automation Projects/FirstSeleniumWebdriverScript (1 class)</span>
+                <span class="test-name">FirstSeleniumWebdriverScript (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -282,23 +296,35 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'launch')
 data.setCell(0, 2, 'TestNG.SwagLabsTest')
-data.setCell(0, 3, 2551);
+data.setCell(0, 3, 2570);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'loginTest')
 data.setCell(1, 2, 'TestNG.SwagLabsTest')
-data.setCell(1, 3, 2195);
+data.setCell(1, 3, 2201);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'LogoutTest')
 data.setCell(2, 2, 'TestNG.SwagLabsTest')
-data.setCell(2, 3, 2105);
+data.setCell(2, 3, 2123);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'currentUrlTest')
 data.setCell(3, 2, 'TestNG.SwagLabsTest')
-data.setCell(3, 3, 0);
+data.setCell(3, 3, 11);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'titleTest')
+data.setCell(4, 2, 'TestNG.sampleTestNG_class')
+data.setCell(4, 3, 8);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testmethod2')
+data.setCell(5, 2, 'TestNG.TestAnnotations')
+data.setCell(5, 3, 0);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testmethod1')
+data.setCell(6, 2, 'TestNG.TestAnnotations')
+data.setCell(6, 3, 0);
 window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
 return data;
 }
@@ -336,33 +362,112 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">TestNG.TestAnnotations</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">beforeSuite</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest</span>
+                <span class="method-start">15 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestNG.sampleTestNG_class</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">15 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">TestNG.SwagLabsTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">4088 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">launch</span>
-                <span class="method-start">1373 ms</span>
+                <span class="method-start">4730 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">3929 ms</span>
+                <span class="method-start">7306 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">currentUrlTest</span>
-                <span class="method-start">6124 ms</span>
+                <span class="method-start">9511 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">LogoutTest</span>
-                <span class="method-start">6140 ms</span>
+                <span class="method-start">9522 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">CloseBrowser</span>
-                <span class="method-start">8245 ms</span>
+                <span class="method-start">11645 ms</span>
               </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestNG.TestAnnotations</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">11742 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">11743 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testmethod1</span>
+                <span class="method-start">11744 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">11744 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">11746 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testmethod2</span>
+                <span class="method-start">11747 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">11748 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">11748 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestNG.sampleTestNG_class</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">titleTest</span>
+                <span class="method-start">11749 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestNG.TestAnnotations</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">11757 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestNG.sampleTestNG_class</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">11758 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestNG.TestAnnotations</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">afterSuite</span>
+                <span class="method-start">11888 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
