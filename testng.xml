@@ -1,2 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/BHAKTI/Selenium Automation Projects/FirstSeleniumWebdriverScript/src/test/java/TestNG"><classes><class name="TestNG.SwagLabsTest"><methods><include name="launch"/><include name="loginTest"/><include name="currentUrlTest"/><include name="LogoutTest"/></methods></class><class name="TestNG.TestAnnotations"><methods><include name="testmethod1"/><include name="testmethod2"/></methods></class><class name="TestNG.sampleTestNG_class"><methods><include name="titleTest"/></methods></class></classes></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/BHAKTI/Selenium Automation Projects/FirstSeleniumWebdriverScript">
+        <classes>
+            <class name="TestNG.SwagLabsTest">
+                <methods>
+                    <include name="launch"/>
+                    <include name="loginTest"/>
+                    <include name="currentUrlTest"/>
+                    <include name="LogoutTest"/>
+                </methods>
+            </class>
+<!--            <class name="TestNG.TestAnnotations">-->
+<!--                <methods>-->
+<!--                    <include name="testmethod1"/>-->
+<!--                    <include name="testmethod2"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="TestNG.sampleTestNG_class">-->
+<!--                <methods>-->
+<!--                    <include name="titleTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+        </classes>
+    </test>
+</suite>

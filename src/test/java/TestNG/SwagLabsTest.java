@@ -7,13 +7,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Ignore;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
+@Listeners(TestNG.TestNG_Listeners.Listener.class)
 public class SwagLabsTest {
     public static WebDriver driver;
 
@@ -51,7 +49,7 @@ public class SwagLabsTest {
         {
 
         String Actualurl = driver.getCurrentUrl();
-        Assert.assertEquals(Actualurl,"https://www.saucedemo.com/inventory.html");
+        Assert.assertEquals(Actualurl,"https://www.saucedemo.com/inventory.htmll");
     }
 
     @Test(priority=4,dependsOnMethods = {"loginTest"})

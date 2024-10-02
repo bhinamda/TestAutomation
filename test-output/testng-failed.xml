@@ -6,9 +6,6 @@
       <class name="TestNG.SwagLabsTest">
         <methods>
           <include name="setup"/>
-          <include name="LogoutTest"/>
-          <include name="titleTest"/>
-          <include name="launch"/>
           <include name="currentUrlTest"/>
           <include name="CloseBrowser"/>
           <include name="loginTest"/>
