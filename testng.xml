@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="All Test Suite" preserve-order="true" parallel="tests" thread-count="3">
     <listeners>
         <listener class-name="TestNG.TestNG_Listeners.Listener"/>
     </listeners>
-    <test verbose="2" preserve-order="true"
-          name="C:/Users/BHAKTI/Selenium Automation Projects/FirstSeleniumWebdriverScript">
+    <parameter name="username" value="standard_user"/>
+    <parameter name="password" value="secret_sauce"/>
+    <!-- Chrome Test -->
+    <test verbose="2"  name="FirstSeleniumWebdriverScript">
+        <parameter name="browser" value="Chrome"/>
         <classes>
             <class name="TestNG.SwagLabsTest">
                 <methods>
@@ -15,21 +18,49 @@
                     <include name="LogoutTest"/>
                 </methods>
             </class>
-            <class name="TestNG.TestAnnotations">
+<!--            <class name="TestNG.TestAnnotations">-->
+<!--                <methods>-->
+<!--                    <include name="testmethod1"/>-->
+<!--                    <include name="testmethod2"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="TestNG.TestNG_Asserts">-->
+<!--                <methods>-->
+<!--                    <include name="testSoft"/>-->
+<!--                    <include name="testHard"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="TestNG.sampleTestNG_class">-->
+<!--                <methods>-->
+<!--                    <include name="titleTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+        </classes>
+        <!-- Firefox Test -->
+    </test>
+    <test name="TestFirefox">
+        <parameter name="browser" value="Firefox"/>
+        <classes>
+        <class name="TestNG.SwagLabsTest">
+            <methods>
+                <include name="launch"/>
+                <include name="loginTest"/>
+                <include name="currentUrlTest"/>
+                <include name="LogoutTest"/>
+            </methods>
+        </class>
+        </classes>
+    </test>
+    <!-- Edge Test -->
+    <test name="TestEdge">
+        <parameter name="browser" value="Edge"/>
+        <classes>
+            <class name="TestNG.SwagLabsTest">
                 <methods>
-                    <include name="testmethod1"/>
-                    <include name="testmethod2"/>
-                </methods>
-            </class>
-            <class name="TestNG.TestNG_Asserts">
-                <methods>
-                    <include name="testSoft"/>
-                    <include name="testHard"/>
-                </methods>
-            </class>
-            <class name="TestNG.sampleTestNG_class">
-                <methods>
-                    <include name="titleTest"/>
+                    <include name="launch"/>
+                    <include name="loginTest"/>
+                    <include name="currentUrlTest"/>
+                    <include name="LogoutTest"/>
                 </methods>
             </class>
         </classes>

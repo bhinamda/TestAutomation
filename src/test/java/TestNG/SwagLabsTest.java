@@ -6,6 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import java.util.Arrays;
@@ -16,13 +19,31 @@ public class SwagLabsTest {
     public static WebDriver driver;
 
     @BeforeClass
-    public void setup() throws InterruptedException
+    @Parameters("browser")
+    public void setup(String browsername) throws InterruptedException
     {
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--incognito");
-        options.setExperimentalOption("excludeSwitches", Arrays.asList("enable-automation", "disable-infobars"));
-        driver = new ChromeDriver(options);
+        if(browsername.equalsIgnoreCase("Chrome"))
+        {
+            WebDriverManager.chromedriver().setup();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--incognito");
+            options.setExperimentalOption("excludeSwitches", Arrays.asList("enable-automation", "disable-infobars"));
+            driver = new ChromeDriver(options);
+        }
+        else if(browsername.equalsIgnoreCase("Firefox"))
+        {
+            WebDriverManager.firefoxdriver().setup();
+            FirefoxOptions options=new FirefoxOptions();
+            options.addArguments("--start-maximized");
+            options.addPreference("browser.privatebrowsing.autostart", true);
+            driver=new FirefoxDriver(options);
+        }
+        else if (browsername.equalsIgnoreCase("Edge"))
+        {
+            WebDriverManager.edgedriver().setup();
+            driver = new EdgeDriver();
+        }
+
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
     }
@@ -35,11 +56,12 @@ public class SwagLabsTest {
         Thread.sleep(2000);
     }
 
+    @Parameters({"username","password"})
     @Test(priority=2)
-    public void loginTest() throws InterruptedException
+    public void loginTest(String username,String password) throws InterruptedException
     {
-        driver.findElement(By.name("user-name")).sendKeys("standard_user");
-       driver.findElement(By.name("password")).sendKeys("secret_sauce");
+        driver.findElement(By.name("user-name")).sendKeys(username);
+       driver.findElement(By.name("password")).sendKeys(password);
         driver.findElement(By.xpath("//input[@id='login-button']")).click();
         Thread.sleep(2000);
     }
@@ -58,7 +80,7 @@ public class SwagLabsTest {
 
         String title = driver.getTitle();
         boolean titleDisplayed=title.isBlank();
-        Assert.assertFalse(titleDisplayed);
+        Assert.assertTrue(titleDisplayed);
     }
 
     @Test(priority=5,alwaysRun = true)

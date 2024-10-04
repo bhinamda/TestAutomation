@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  FirstSeleniumWebdriverScript</title>
+<title>TestNG:  TestEdge</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>FirstSeleniumWebdriverScript</h2><table border='1' align="center">
+<h2 align='center'>TestEdge</h2><table border='1' align="center">
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/2/1</td>
 </tr><tr>
 <td>Started on:</td><td>Fri Oct 04 10:59:46 EDT 2024</td>
 </tr>
-<tr><td>Total time:</td><td>7 seconds (7275 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7289 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,83 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestNG.SwagLabsTest.CloseBrowser()'><b>CloseBrowser</b><br>Test class: TestNG.SwagLabsTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [bdff9c5d-38ae-4f53-8e91-820bd5f12d9d, close {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 131.0, moz:accessibilityChecks: false, moz:buildID: 20240923135042, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 33384, moz:profile: C:\Users\BHAKTI\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: bdff9c5d-38ae-4f53-8e91-820bd5f12d9d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:410)
+	at TestNG.SwagLabsTest.CloseBrowser(SwagLabsTest.java:105)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1478812567", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1478812567'><pre>org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [bdff9c5d-38ae-4f53-8e91-820bd5f12d9d, close {}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 131.0, moz:accessibilityChecks: false, moz:buildID: 20240923135042, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 33384, moz:profile: C:\Users\BHAKTI\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: bdff9c5d-38ae-4f53-8e91-820bd5f12d9d
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:410)
+	at TestNG.SwagLabsTest.CloseBrowser(SwagLabsTest.java:105)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:222)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:131)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>TestNG.SwagLabsTest@4690b489</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -77,8 +154,7 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='TestNG.SwagLabsTest.LogoutTest()'><b>LogoutTest</b><br>Test class: TestNG.SwagLabsTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[text()=&apos;Open Menu&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
@@ -102,9 +178,8 @@ Session ID: bdff9c5d-38ae-4f53-8e91-820bd5f12d9d
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace334845767", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace334845767'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[text()=&apos;Open Menu&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1683282118", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1683282118'><pre>org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
@@ -148,11 +223,10 @@ Session ID: bdff9c5d-38ae-4f53-8e91-820bd5f12d9d
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 </pre></div></td>
 <td>0</td>
-<td>TestNG.SwagLabsTest@1fe20588</td></tr>
+<td>TestNG.SwagLabsTest@4690b489</td></tr>
 <tr>
 <td title='TestNG.SwagLabsTest.loginTest()'><b>loginTest</b><br>Test class: TestNG.SwagLabsTest<br>Parameters: standard_user, secret_sauce</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: *[name=&apos;user-name&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
@@ -167,7 +241,7 @@ Session ID: bdff9c5d-38ae-4f53-8e91-820bd5f12d9d
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
 	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
 	at TestNG.SwagLabsTest.loginTest(SwagLabsTest.java:63)
@@ -176,9 +250,8 @@ Session ID: bdff9c5d-38ae-4f53-8e91-820bd5f12d9d
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace274382179", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace274382179'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: *[name=&apos;user-name&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace991077223", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace991077223'><pre>org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
@@ -196,7 +269,7 @@ Session ID: bdff9c5d-38ae-4f53-8e91-820bd5f12d9d
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
 	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
 	at TestNG.SwagLabsTest.loginTest(SwagLabsTest.java:63)
@@ -221,8 +294,8 @@ Session ID: bdff9c5d-38ae-4f53-8e91-820bd5f12d9d
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 </pre></div></td>
-<td>0</td>
-<td>TestNG.SwagLabsTest@1fe20588</td></tr>
+<td>1</td>
+<td>TestNG.SwagLabsTest@4690b489</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -235,8 +308,8 @@ Session ID: bdff9c5d-38ae-4f53-8e91-820bd5f12d9d
 <tr>
 <td title='TestNG.SwagLabsTest.launch()'><b>launch</b><br>Test class: TestNG.SwagLabsTest<br>Test method: This will open the browser</td>
 <td></td>
-<td>3</td>
-<td>TestNG.SwagLabsTest@1fe20588</td></tr>
+<td>2</td>
+<td>TestNG.SwagLabsTest@4690b489</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -248,16 +321,16 @@ Session ID: bdff9c5d-38ae-4f53-8e91-820bd5f12d9d
 </tr>
 <tr>
 <td title='TestNG.SwagLabsTest.currentUrlTest()'><b>currentUrlTest</b><br>Test class: TestNG.SwagLabsTest</td>
-<td><div><pre>java.lang.Throwable: Method TestNG.SwagLabsTest.currentUrlTest() on instance TestNG.SwagLabsTest@1fe20588 depends on not successfully finished methods 
-[TestNG.SwagLabsTest.loginTest() on instance TestNG.SwagLabsTest@1fe20588]
+<td><div><pre>java.lang.Throwable: Method TestNG.SwagLabsTest.currentUrlTest() on instance TestNG.SwagLabsTest@4690b489 depends on not successfully finished methods 
+[TestNG.SwagLabsTest.loginTest() on instance TestNG.SwagLabsTest@4690b489]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace814358247", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace814358247'><pre>java.lang.Throwable: Method TestNG.SwagLabsTest.currentUrlTest() on instance TestNG.SwagLabsTest@1fe20588 depends on not successfully finished methods 
-[TestNG.SwagLabsTest.loginTest() on instance TestNG.SwagLabsTest@1fe20588]
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace783944391", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace783944391'><pre>java.lang.Throwable: Method TestNG.SwagLabsTest.currentUrlTest() on instance TestNG.SwagLabsTest@4690b489 depends on not successfully finished methods 
+[TestNG.SwagLabsTest.loginTest() on instance TestNG.SwagLabsTest@4690b489]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -273,7 +346,7 @@ Session ID: bdff9c5d-38ae-4f53-8e91-820bd5f12d9d
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 </pre></div></td>
 <td>0</td>
-<td>TestNG.SwagLabsTest@1fe20588</td></tr>
+<td>TestNG.SwagLabsTest@4690b489</td></tr>
 </table><p>
 </body>
 </html>
