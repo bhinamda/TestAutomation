@@ -15,7 +15,8 @@ import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 //@Listeners(TestNG.TestNG_Listeners.Listener.class)
-public class SwagLabsTest {
+public class SwagLabsTest
+{
     public static WebDriver driver;
 
     @BeforeClass
@@ -43,7 +44,6 @@ public class SwagLabsTest {
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
         }
-
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
     }
