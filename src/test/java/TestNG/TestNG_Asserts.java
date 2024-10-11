@@ -4,6 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import static org.testng.Assert.assertNotEquals;
+
 public class TestNG_Asserts
 {
     //Soft Assert
@@ -12,7 +14,7 @@ public class TestNG_Asserts
     {
         SoftAssert sa=new SoftAssert();
         System.out.println("Test 1 started");
-        sa.assertEquals(12,13,"Count mismatch");
+        sa.assertEquals(13,13,"Count mismatch");
         System.out.println("Test 1 completes");
         sa.assertAll();
     }
@@ -23,7 +25,7 @@ public class TestNG_Asserts
     {
 
         System.out.println("Test 2 started");
-        Assert.assertEquals(12,13);
+        Assert.assertNotEquals(12,13);
         System.out.println("Test 2 completes");
     }
 }

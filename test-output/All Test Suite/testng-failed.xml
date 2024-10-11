@@ -1,51 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="tests" name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
   <parameter name="password" value="secret_sauce"/>
   <parameter name="username" value="standard_user"/>
   <listeners>
     <listener class-name="TestNG.TestNG_Listeners.Listener"/>
   </listeners>
-  <test thread-count="3" parallel="tests" name="TestEdge(failed)">
-    <parameter name="browser" value="Edge"/>
-    <classes>
-      <class name="TestNG.SwagLabsTest">
-        <methods>
-          <include name="setup"/>
-          <include name="LogoutTest"/>
-          <include name="currentUrlTest"/>
-          <include name="CloseBrowser"/>
-          <include name="loginTest" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- TestNG.SwagLabsTest -->
-    </classes>
-  </test> <!-- TestEdge(failed) -->
-  <test thread-count="3" parallel="tests" name="FirstSeleniumWebdriverScript(failed)">
+  <test thread-count="5" name="TestChrome(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="TestNG.SwagLabsTest">
+      <class name="TestNG.TestNG_Asserts">
         <methods>
-          <include name="setup"/>
-          <include name="LogoutTest"/>
-          <include name="currentUrlTest"/>
-          <include name="CloseBrowser"/>
-          <include name="loginTest" invocation-numbers="0"/>
+          <include name="testSoft"/>
         </methods>
-      </class> <!-- TestNG.SwagLabsTest -->
+      </class> <!-- TestNG.TestNG_Asserts -->
     </classes>
-  </test> <!-- FirstSeleniumWebdriverScript(failed) -->
-  <test thread-count="3" parallel="tests" name="TestFirefox(failed)">
-    <parameter name="browser" value="Firefox"/>
-    <classes>
-      <class name="TestNG.SwagLabsTest">
-        <methods>
-          <include name="setup"/>
-          <include name="LogoutTest"/>
-          <include name="currentUrlTest"/>
-          <include name="CloseBrowser"/>
-          <include name="loginTest" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- TestNG.SwagLabsTest -->
-    </classes>
-  </test> <!-- TestFirefox(failed) -->
+  </test> <!-- TestChrome(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->

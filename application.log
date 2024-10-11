@@ -1,0 +1,23 @@
+2024-10-10 10:49:08,143  INFO [main] LoggerTestClass:32 - ****************************** Starting test cases execution  *****************************************
+2024-10-10 10:49:09,560  INFO [main] LoggerTestClass:35 - launching chrome broswer
+2024-10-10 10:49:12,083  INFO [main] LoggerTestClass:42 - entering application URL
+2024-10-10 10:49:12,084  WARN [main] LoggerTestClass:43 - Hey this just a warning message
+2024-10-10 10:49:12,085 FATAL [main] LoggerTestClass:44 - hey this is just fatal error message
+2024-10-10 10:49:12,086 DEBUG [main] LoggerTestClass:45 - this is debug message
+2024-10-10 10:49:12,089  INFO [main] LoggerTestClass:50 - ****************************** starting test case *****************************************
+2024-10-10 10:49:12,089  INFO [main] LoggerTestClass:51 - ****************************** freeCrmTitleTest *****************************************
+2024-10-10 10:49:12,101  INFO [main] LoggerTestClass:54 - login page title is--->#1 Free CRM Software Power Up your Entire Business Free Forever
+2024-10-10 10:49:12,104  INFO [main] LoggerTestClass:57 - ****************************** ending test case *****************************************
+2024-10-10 10:49:12,104  INFO [main] LoggerTestClass:58 - ****************************** freeCrmTitleTest *****************************************
+2024-10-10 10:49:12,362  INFO [main] LoggerTestClass:78 - ****************************** Browser is closed *****************************************
+2024-10-10 10:49:12,366  INFO [main] LoggerTestClass:32 - ****************************** Starting test cases execution  *****************************************
+2024-10-10 10:49:13,169  INFO [main] LoggerTestClass:35 - launching chrome broswer
+2024-10-10 10:49:15,391  INFO [main] LoggerTestClass:42 - entering application URL
+2024-10-10 10:49:15,392  WARN [main] LoggerTestClass:43 - Hey this just a warning message
+2024-10-10 10:49:15,392 FATAL [main] LoggerTestClass:44 - hey this is just fatal error message
+2024-10-10 10:49:15,393 DEBUG [main] LoggerTestClass:45 - this is debug message
+2024-10-10 10:49:15,395  INFO [main] LoggerTestClass:64 - ****************************** starting test case *****************************************
+2024-10-10 10:49:15,395  INFO [main] LoggerTestClass:65 - ****************************** freemCRMLogoTest *****************************************
+2024-10-10 10:49:15,439  INFO [main] LoggerTestClass:70 - ****************************** ending test case *****************************************
+2024-10-10 10:49:15,440  INFO [main] LoggerTestClass:71 - ****************************** freemCRMLogoTest *****************************************
+2024-10-10 10:49:15,644  INFO [main] LoggerTestClass:78 - ****************************** Browser is closed *****************************************

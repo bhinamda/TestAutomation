@@ -19,33 +19,34 @@ public class SwagLabsTest
 {
     public static WebDriver driver;
 
-    @BeforeClass
     @Parameters("browser")
-    public void setup(String browsername) throws InterruptedException
+    @BeforeClass
+    public void setup(@Optional("Chrome") String browsername) throws InterruptedException
     {
         if(browsername.equalsIgnoreCase("Chrome"))
         {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--incognito");
+            options.addArguments("--disable-extensions");
             options.setExperimentalOption("excludeSwitches", Arrays.asList("enable-automation", "disable-infobars"));
             driver = new ChromeDriver(options);
         }
-        else if(browsername.equalsIgnoreCase("Firefox"))
-        {
-            WebDriverManager.firefoxdriver().setup();
-            FirefoxOptions options=new FirefoxOptions();
-            options.addArguments("--start-maximized");
-            options.addPreference("browser.privatebrowsing.autostart", true);
-            driver=new FirefoxDriver(options);
-        }
-        else if (browsername.equalsIgnoreCase("Edge"))
-        {
-            WebDriverManager.edgedriver().setup();
-            driver = new EdgeDriver();
-        }
-        driver.manage().deleteAllCookies();
-        driver.manage().window().maximize();
+//        else if(browsername.equalsIgnoreCase("Firefox"))
+//        {
+//            WebDriverManager.firefoxdriver().setup();
+//            FirefoxOptions options=new FirefoxOptions();
+//            options.addArguments("--start-maximized");
+//            options.addPreference("browser.privatebrowsing.autostart", true);
+//            driver=new FirefoxDriver(options);
+//        }
+//        else if (browser.equalsIgnoreCase("Edge"))
+//        {
+//            WebDriverManager.edgedriver().setup();
+//            driver = new EdgeDriver();
+//        }
+            driver.manage().deleteAllCookies();
+            driver.manage().window().maximize();
     }
 
     @Test(priority=1,description = "This will open the browser")
@@ -56,20 +57,23 @@ public class SwagLabsTest
         Thread.sleep(2000);
     }
 
-    @Parameters({"username","password"})
-    @Test(priority=2)
-    public void loginTest(String username,String password) throws InterruptedException
+    @Parameters({"username", "password"})
+    @Test(priority = 2)
+    public void loginTest(@Optional("standard_user") String unm, @Optional("secret_sauce")String pwd) throws InterruptedException
     {
-        driver.findElement(By.name("user-name")).sendKeys(username);
-       driver.findElement(By.name("password")).sendKeys(password);
+       // driver.findElement(By.id("user-name")).sendKeys(unm);
+      //  driver.findElement(By.xpath("//input[@id='user-name']")).sendKeys(unm);
+        driver.findElement(By.cssSelector("input#user-name")).sendKeys(unm);
+        Thread.sleep(2000);
+        driver.findElement(By.id("password")).sendKeys(pwd);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//input[@id='login-button']")).click();
         Thread.sleep(2000);
     }
-
+    
     @Test(priority=3,dependsOnMethods = "loginTest")
     public void currentUrlTest()
-        {
-
+    {
         String Actualurl = driver.getCurrentUrl();
         Assert.assertEquals(Actualurl,"https://www.saucedemo.com/inventory.html");
     }
@@ -77,16 +81,15 @@ public class SwagLabsTest
     @Test(priority=4,dependsOnMethods = {"loginTest"})
     public void titleTest()
     {
-
         String title = driver.getTitle();
         boolean titleDisplayed=title.isBlank();
-        Assert.assertTrue(titleDisplayed);
+        Assert.assertTrue(!titleDisplayed);
     }
 
     @Test(priority=5,alwaysRun = true)
     public void LogoutTest() throws InterruptedException
     {
-        WebElement logout = driver.findElement(By.xpath("//*[text()='Open Menu']"));
+        WebElement logout = driver.findElement(By.xpath("//div[@class=\"bm-burger-button\"]/*[text()='Open Menu']"));
         logout.click();
         Thread.sleep(1000);
         WebElement clickLogout = driver.findElement(By.xpath("//*[contains(text(),'Logout')]"));
